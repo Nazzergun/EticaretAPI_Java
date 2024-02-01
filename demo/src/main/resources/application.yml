@@ -1,0 +1,30 @@
+
+server:
+  port: 9089
+spring:
+  application:
+    name: ecommerce
+  datasource:
+    url: jdbc:mysql://localhost:3306/akademi12-ecommerce?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+
+    username: root
+    password: naznaz123
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+      properties:
+       hibernate:
+         format_sql: true
+
+
+main:
+  allow-circular-references: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
